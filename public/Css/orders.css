@@ -1,0 +1,120 @@
+/* ---------- Orders Page Styles ---------- */
+
+.orders-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.orders-details-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.orders-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 24px;
+    overflow-x: auto;
+}
+
+.orders-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10px;
+    border-bottom: 2px solid #eef2f6;
+    padding-bottom: 8px;
+}
+
+/* Scroll hint stays fixed below */
+.orders-scroll-hint {
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 6px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+
+/* Table */
+.orders-table {
+    min-width: 600px;
+    /* forces scroll on small screens */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.orders-table thead tr {
+    border-bottom: 2px solid #eef2f6;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 12px;
+    white-space: nowrap;
+}
+
+.orders-table th {
+    font-weight: 600;
+}
+
+.orders-table td {
+    border-bottom: 1px solid #eef2f6;
+}
+
+.orders-table td:nth-child(2),
+.orders-table td:nth-child(4) {
+    text-align: right;
+}
+
+.orders-table td:nth-child(3) {
+    text-align: center;
+}
+
+/* Status badges */
+.orders-status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.orders-status-pending {
+    background-color: #fffbeb;
+    color: #f59e0b;
+}
+
+.orders-status-processing {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.orders-status-shipped {
+    background-color: #dbeafe;
+    color: #3b82f6;
+}
+
+.orders-status-delivered {
+    background-color: #dcfce7;
+    color: #22c55e;
+}
+
+.orders-status-cancelled {
+    background-color: #fee2e2;
+    color: #ef4444;
+}
+
+/* Responsive: stack layout */
+@media (max-width: 767px) {
+    .orders-details-grid {
+        grid-template-columns: 1fr;
+    }
+}
